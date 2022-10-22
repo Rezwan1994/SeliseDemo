@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="row">
+        <div  class="col-md-4">
+            <table>
+                <tr *ngFor="let a of bookmarks">
+                    <td>{{a.title}}</td>
+                    <td><button class="btnDetail" (click)="Details(a)">Details</button></td>
+                </tr>
+            </table>
+               
+        </div>
+    </div>
+ 
+</div>
+
+<app-bookmark-details *ngIf="bookmarks.length > 0" [bookmark]="bookmark"></app-bookmark-details>
